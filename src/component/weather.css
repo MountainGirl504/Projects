@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 3px solid rgb(2, 51, 2); */
+    border: 3px solid rgb(2, 51, 2);
     border-radius: 10px;
     padding: 4%;
     height: 90%;
@@ -18,6 +18,8 @@
     
     
 }
+
+
 .theme{
     
     width: 90%;
@@ -65,15 +67,43 @@ button {
 }
 
 input{
-    border: 1px solid lightslategrey;
+    border: 1px solid rgb(77, 84, 92);
     background: transparent;
     padding-left: 15px;
 }
 
-.header{
-   display: flex;
-   justify-content: center;
-   font-family: 'PT Sans', sans-serif;
+h2{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 30px;
+    animation-name: h2;
+    animation-duration: 2s;
+}
+@keyframes h2{
+    from {color: black;}
+    to{color: red;}
+}
+
+.picture{
+    width: 20%;
+    height: 20%;
+    animation-name: picture;
+    animation-duration: 2s;
+    perspective:1000;
+    transform-style:preserve-3d;
+    animation:spin 2s linear 0s;
+}
+@keyframes spin{
+    
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }    
+    
 }
 
 p {

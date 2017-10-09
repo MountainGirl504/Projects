@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './weather.css';
+import Pic from '../img/open_weather.jpeg';
 
 class Weather extends Component {
 
@@ -7,6 +8,7 @@ class Weather extends Component {
         return (
             <div className="main_theme">
                 <div className="theme">
+                    <img className="picture" src={Pic}/>
                     <h2 className="header"> Weather App </h2>
                 <div className="input_buttons">
                     <input placeholder="City:" className="location" onChange={(e) => this.props.propChange(e.target.value)}></input>
