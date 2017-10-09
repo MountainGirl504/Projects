@@ -29,7 +29,7 @@ class App extends Component {
       axios.get(`http://localhost:8080/api/weather/${this.state.userInput}`)
       .then(response => {  
         this.setState({
-          location: `${response.data.name}, ${response.data.sys.country}`,
+          location: `${ response.data.name}, ${response.data.sys.country}`,
           conditions: response.data.weather[0].main,
           icon: `http://openweathermap.org/img/w/${response.data.weather[0].icon}.png`,
           temp: `${Math.round(1.8*(response.data.main.temp-273)+32)} F`, 
