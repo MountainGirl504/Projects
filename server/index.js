@@ -8,7 +8,7 @@ const express = require('express'),
     
     
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(cors())
 
 app.get('/api/weather/:town', (req, res) => {
